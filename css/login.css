@@ -68,17 +68,17 @@ body {
 }
 
 .form-control:focus {
-  -webkit-animation: sallanma 0.1s linear;
-  animation: sallanma 0.1s linear;
+  -webkit-animation: wobble 0.1s linear;
+  animation: wobble 0.1s linear;
 }
 
-@-webkit-keyframes sallanma {
+@-webkit-keyframes wobble {
   100% {
     transform: rotate(20deg);
   }
 }
 
-@keyframes sallanma {
+@keyframes wobble {
   100% {
     transform: rotate(20deg);
   }

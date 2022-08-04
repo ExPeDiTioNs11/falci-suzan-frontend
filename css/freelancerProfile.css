@@ -130,6 +130,7 @@ body {
 .ranking h6 {
   font-weight: 600;
   padding-bottom: 16px;
+  margin-top: 10px;
 }
 .ranking li {
   display: flex;
@@ -172,13 +173,32 @@ ul li {
 
 .rosette {
   margin-left: 5%;
+  justify-content: space-around;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+
   flex-wrap: wrap;
 }
 
 .rozet {
   width: 60px;
   height: 60px;
+}
+
+/* Sadece Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .rosette {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+/* Sadece Laptop, Desktop */
+@media screen and (min-width: 1025px) {
+  .review-section {
+    width: 88%;
+  }
+  .rosette {
+    justify-content: space-evenly;
+  }
 }

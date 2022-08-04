@@ -1,57 +1,62 @@
-.card{
-    width: 400px;
-    border: none;
-    border-radius: 10px;
-    background-color: #fff;
-   
-  }
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+}
 
-  .stats{
-        color: #000 !important;
-  }
-  .articles{
-    font-size:10px;
-    color: #a1aab9;
-  }
-  .number1{
-    font-weight:500;
-  }
-  .followers{
-      font-size:10px;
-    color: #a1aab9;
-  
-  }
-  .number2{
-    font-weight:500;
-  }
-  .rating{
-      font-size:10px;
-    color: #a1aab9;
-  }
-  .number3{
-    font-weight:500;
-  }
+.stats {
+  color: #000 !important;
+}
+.articles {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.number1 {
+  font-weight: 500;
+}
+.followers {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.number2 {
+  font-weight: 500;
+}
+.rating {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.number3 {
+  font-weight: 500;
+}
 
-  h4
-  {
-      color: black;
-  }
+h4 {
+  color: black;
+}
 
-  .stats
-  {
-      background-color: white !important;
-  }
+.stats {
+  background-color: white !important;
+}
 
-  .ml-3
-  {
-    padding: 10px;
-  }
+.ml-3 {
+  padding: 10px;
+}
 
-  .fal_tag
-  {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: auto;
+.fal_tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+}
+/*Telefon*/
+@media screen and (max-width: 768px) {
+  .card {
+    width: 25rem !important;
   }
+}
+/* Telefon ve Tablet*/
+@media screen and (max-width: 1024px) {
+  .card {
+    margin: 4% auto !important;
+  }
+}

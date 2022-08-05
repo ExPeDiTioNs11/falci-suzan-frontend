@@ -91,9 +91,8 @@
 
 .fal_türleri {
   margin-top: 2%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* flex-direction: row; */
   background-color: #2531e115;
   border-radius: 15px;
   padding: 10px;

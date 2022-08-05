@@ -14,10 +14,6 @@
   overflow-y: auto;
 }
 
-.comment_buy {
-  border-radius: 15px;
-}
-
 /* comment css start */
 body {
   background: #eee;
@@ -183,6 +179,14 @@ ul li {
 .rozet {
   width: 60px;
   height: 60px;
+}
+
+/* Telefon Yatay Mod */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .rosette {
+    justify-content: space-evenly;
+    margin-left: 0;
+  }
 }
 
 /* Sadece Tablet */

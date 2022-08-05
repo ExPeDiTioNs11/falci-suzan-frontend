@@ -51,7 +51,7 @@ h4 {
 /*Telefon*/
 @media screen and (max-width: 768px) {
   .card {
-    width: 25rem !important;
+    max-width: 25rem !important;
   }
 }
 /* Telefon ve Tablet*/

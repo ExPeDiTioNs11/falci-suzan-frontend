@@ -113,28 +113,15 @@
   transition: 0.5s;
 }
 
-.slider {
-  /* float: right; */
-  /* width: 15%; */
-  /* width: 38%; */
-  /* width: 100%; */
-  position: relative;
-  height: 267px;
-}
-
-.blog_content {
-  /* float: left; */
+/* float: left; */
+/*
+  .blog_content {
   width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.carousel-inner {
-  height: 100%;
-  border-radius: 15px; /*bu gereksiz olabilir*/
-}
+} */
 
 .card-text {
   background-color: white;
@@ -159,29 +146,24 @@
   }
 } */
 
-.carousel-control.right,
-.carousel-control.left {
-  background-image: none;
+.slider {
+  position: relative;
+  height: 267px;
 }
 
-.carousel-indicators li {
-  border-color: #c0c0c0;
-}
-.carousel-indicators .active {
-  background-color: #c0c0c0;
-}
 .carousel-inner {
-  margin-bottom: 50px;
-}
-.carousel .carousel-item {
-  height: 400px;
-  /*
-  background-size: contain; */
+  height: 100%;
+  border-radius: 15px;
 }
 
 .carousel {
   height: 100%;
 }
+
+.carousel .carousel-item {
+  height: 400px;
+}
+
 .fill img {
   position: absolute;
   top: 0;
@@ -190,20 +172,25 @@
 }
 .fill {
   width: 100%;
-  /* height: 75%; */
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 15px;
 }
-
-/*Telefon, Tablet portre modu*/
-@media screen and (max-width: 992px) {
+/*Telefon*/
+@media screen and (max-width: 600px) {
   .ilan {
     width: 100%;
-    margin-top: 1rem;
   }
-
+}
+/*Tablet*/
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .ilan {
+    width: 70%;
+  }
+}
+/*Telefon, Tablet portre modu*/
+@media screen and (max-width: 992px) {
   .carousel-inner {
     height: 100%;
   }
@@ -218,9 +205,6 @@
   }
 }
 
-/* Sadece Laptop, Desktop */
+/* Sadece Laptop, Desktop
 @media screen and (min-width: 1025px) {
-  /* .slider {
-    width: 15%;
-  } */
-}
+} */

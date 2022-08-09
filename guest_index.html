@@ -16,10 +16,29 @@
   <link rel="stylesheet" href="css/guest_index.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/secondCard.css">
+  <link rel="stylesheet" href="css/loadingScreen.css">
 
 </head>
 
 <body>
+
+  <!-- Loading Screen Modal -->
+
+  <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="container-fluid preloader" id="preloader">
+        <div class="row beans">
+        </div>
+        <div class="row grinder">
+        </div>
+        <div class="row grinder_bottom">
+        </div>
+        <div class="row v60">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- navbar start -->
   <header>
@@ -953,16 +972,6 @@
     </div>
   </footer>
 
-
-
-
-
-
-
-
-
-
-
   <!--bootstrap 5 scripts and poopers-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -970,7 +979,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-
+  <script src="js/animation/loadingScreen.js"></script>
 
 </body>
 

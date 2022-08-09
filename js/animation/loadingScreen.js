@@ -1,20 +1,19 @@
 const preloader = document.getElementById("preloader");
 const eventButtons = document.querySelectorAll(".site_name");
-
-const MyTimeout = setTimeout(closePreloader, 20000);
+const myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {
+  keyboard: false,
+});
 
 eventButtons.forEach((button) => {
   button.addEventListener("click", playPreloader);
 });
 
 function closePreloader() {
-  preloader.style.display = "none";
+  myModal.toggle();
 }
 
 function playPreloader(e) {
   e.preventDefault();
-  preloader.style.display = "block";
-  MyTimeout;
+  myModal.toggle();
+  setTimeout(closePreloader, 10000);
 }
-
-//clearTimeout(closePreloader);

@@ -20,14 +20,22 @@
 </head>
 
 <body>
-  <div class="container-fluid preloader" id="preloader">
-    <div class="row beans">
-    </div>
-    <div class="row grinder">
-    </div>
-    <div class="row grinder_bottom">
-    </div>
-    <div class="row v60">
+
+  <!-- Loading Screen Modal -->
+
+  <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="container-fluid preloader" id="preloader">
+        <div class="row beans">
+        </div>
+        <div class="row grinder">
+        </div>
+        <div class="row grinder_bottom">
+        </div>
+        <div class="row v60">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -232,7 +240,7 @@
     <h5 class="header my-4 text-center text-md-start">Freelancer falcılar BLOG</h5>
 
     <div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
-      <div class="container mb-4">
+      <div class="container mt-2 mb-4">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-lg-4">
             <div class="card blog_card" style="max-width: 18rem;">

@@ -1,0 +1,87 @@
+.list-group {
+  border: none;
+  box-shadow: 0 0 5px lightgray;
+}
+.list-group-item {
+  color: #8d96ac;
+}
+
+.grid-list {
+  max-width: 1100px;
+}
+.mobile-list {
+  display: none;
+}
+
+.credits-body {
+  background-color: #fffafa;
+}
+
+.grid-list .card {
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 40%);
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #1b2985;
+}
+
+.credit-text {
+  font-size: 1.5rem;
+  color: #1cbbed;
+}
+
+header h1 {
+  color: #1b2985;
+}
+header p {
+  color: #8d96ac;
+  font-weight: bold;
+}
+
+.card-title p,
+.buy-info p {
+  color: #fffafa;
+}
+
+.buy-info-button,
+.buy-info-button-large {
+  border-radius: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 187, 237, 1) 0%,
+    rgba(27, 41, 133, 1) 100%
+  );
+  transition: background linear 0.2s, transform ease-in 0.1s;
+}
+
+.buy-info-button-large:hover {
+  background: rgba(28, 187, 237, 1);
+  font-weight: bolder;
+  transform: scale(1.1);
+}
+.buy-info-button-large a:hover {
+  color: inherit;
+}
+
+.card-title h2 {
+  color: #1cbbed;
+}
+
+.credit {
+  color: #1b2985;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-list {
+    display: none;
+  }
+  .mobile-list {
+    display: block;
+  }
+  .credit-text {
+    font-size: 1.2rem;
+    color: #1cbbed;
+  }
+}

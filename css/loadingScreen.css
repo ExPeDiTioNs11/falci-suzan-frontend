@@ -2,6 +2,9 @@
   background: bisque;
 } */
 
+.modal-content {
+  background-color: transparent;
+}
 .preloader {
   /* display: none; */
   position: fixed;
@@ -182,8 +185,8 @@
   border-left: 60px solid transparent;
   border-right: 60px solid transparent;
   border-radius: 5px;
-  -webkit-filter: drop-shadow(0 0 1px black);
-  filter: drop-shadow(0 0 1px black);
+  -webkit-filter: drop-shadow(0 0 2px gray);
+  filter: drop-shadow(0 0 2px gray);
 }
 
 .v60:before {
@@ -206,6 +209,9 @@
   background: bisque;
   left: -45px;
   border-radius: 60px;
+  border-top: 1px solid lightgrey;
+  -webkit-filter: drop-shadow(0 0 1px gray);
+  filter: drop-shadow(0 0 1px gray);
 }
 
 .drip {

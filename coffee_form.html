@@ -59,99 +59,216 @@
   </nav>
 
   <main role="main">
-    <div class="container">
+    <div class="container my-5">
       <header>
         <h1 class="text-center">Kahve Falı</h1>
       </header>
-      <div class="container">
-        <h2>Seçtiğin Yorumcu</h2>
-        <img
-          src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-          class="rounded" width="155">
-        <p>Ali Mert Başak</p>
-      </div>
+      <div class="container my-5">
+        <div class="row">
+          <div class="yorumcu col-sm-12 col-md-6 col-lg-3 text-center">
+            <h2>Seçtiğin yorumcu</h2>
+            <img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              class="rounded-circle my-2" width="100">
+            <p>Ali Mert Başak</p>
+          </div>
+          <div class="kahve-wrapper col-sm-12 col-md-6 col-lg-9 mt-5 mt-md-0">
+            <h3>Fincan Fotoğrafların</h3>
+            <p>Lütfen fincanına ait 4, tabağına ait 1 fotoğraf ekle</p>
 
-      <h3>Fincan Fotoğrafların</h3>
-      <p>Lütfen fincanına ait 4, tabağına ait 1 fotoğraf ekle</p>
+            <div class="d-flex flex-row">
+              <label class="rad-label">
+                <input type="radio" class="rad-input" name="rad">
+                <div class="rad-design"></div>
+                <div class="rad-text">Bilgisayardan yükle</div>
+              </label>
 
-      <div class="d-flex flex-row">
-        <label class="rad-label">
-          <input type="radio" class="rad-input" name="rad">
-          <div class="rad-design"></div>
-          <div class="rad-text">Bilgisayardan yükle</div>
-        </label>
+              <label class="rad-label">
+                <input type="radio" class="rad-input" name="rad">
+                <div class="rad-design"></div>
+                <div class="rad-text">Web kamerasıyla çek</div>
+              </label>
 
-        <label class="rad-label">
-          <input type="radio" class="rad-input" name="rad">
-          <div class="rad-design"></div>
-          <div class="rad-text">Web kamerasıyla çek</div>
-        </label>
+            </div>
+            <!-- Upload Photos -->
+            <!-- Upload from Computer -->
+            <div class="upload-computer d-flex flex-row gx-3">
+              <div class="photo-upload" data-photo="1">
+                <img src="assets/images/add-photo.png" class="add-photo-btn">
+                <input id="images" name="image[]" type="file">
+              </div>
+              <div class="photo-upload" data-photo="2">
+                <img src="assets/images/add-photo.png" class="add-photo-btn">
+                <input id="images" name="image[]" type="file">
+              </div>
+              <div class="photo-upload" data-photo="3">
+                <img src="assets/images/add-photo.png" class="add-photo-btn">
+                <input id="images" name="image[]" type="file">
+              </div>
+              <div class="photo-upload" data-photo="4">
+                <img src="assets/images/add-photo.png" class="add-photo-btn">
+                <input id="images" name="image[]" type="file">
+              </div>
+              <div class="photo-upload" data-photo="5">
+                <img src="assets/images/add-photo.png" class="add-photo-btn">
+                <input id="images" name="image[]" type="file">
+              </div>
+            </div>
 
-      </div>
-      <!-- Upload Photos -->
-      <!-- Upload from Computer -->
-      <div class="upload-computer d-flex flex-row gap-3">
-        <div class="photo-upload" data-photo="1">
-          <img src="assets/images/add-photo.png" class="add-photo-btn">
-          <input id="images" name="image[]" type="file">
-        </div>
-        <div class="photo-upload" data-photo="2">
-          <img src="assets/images/add-photo.png" class="add-photo-btn">
-          <input id="images" name="image[]" type="file">
-        </div>
-        <div class="photo-upload" data-photo="3">
-          <img src="assets/images/add-photo.png" class="add-photo-btn">
-          <input id="images" name="image[]" type="file">
-        </div>
-        <div class="photo-upload" data-photo="4">
-          <img src="assets/images/add-photo.png" class="add-photo-btn">
-          <input id="images" name="image[]" type="file">
-        </div>
-        <div class="photo-upload" data-photo="5">
-          <img src="assets/images/add-photo.png" class="add-photo-btn">
-          <input id="images" name="image[]" type="file">
-        </div>
-      </div>
+            <!-- Upload using Webcam -->
+            <div class="upload-webcam d-flex flex-row">
+              <div class="photo-upload pe-2">
+                <img src="assets/images/add-photo.png" data-photo="1" class="add-photo-btn">
+              </div>
+              <div class="photo-upload px-2">
+                <img src="assets/images/add-photo.png" data-photo="2" class="add-photo-btn">
 
-      <!-- Upload using Webcam -->
-      <div class="upload-webcam d-flex flex-row gap-3">
-        <div class="photo-upload">
-          <img src="assets/images/add-photo.png" data-photo="1" class="add-photo-btn">
-        </div>
-        <div class="photo-upload">
-          <img src="assets/images/add-photo.png" data-photo="2" class="add-photo-btn">
+              </div>
+              <div class="photo-upload px-2">
+                <img src="assets/images/add-photo.png" data-photo="3" class="add-photo-btn">
 
-        </div>
-        <div class="photo-upload">
-          <img src="assets/images/add-photo.png" data-photo="3" class="add-photo-btn">
+              </div>
+              <div class="photo-upload px-2">
+                <img src="assets/images/add-photo.png" data-photo="4" class="add-photo-btn">
 
-        </div>
-        <div class="photo-upload">
-          <img src="assets/images/add-photo.png" data-photo="4" class="add-photo-btn">
+              </div>
+              <div class="photo-upload px-2">
+                <img src="assets/images/add-photo.png" data-photo="5" class="add-photo-btn">
 
-        </div>
-        <div class="photo-upload">
-          <img src="assets/images/add-photo.png" data-photo="5" class="add-photo-btn">
-
-        </div>
-      </div>
-      <div class="contentarea">
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-          <button id="startbutton">Take photo</button>
-          <button id="reset">Reset</button>
-        </div>
-        <canvas id="canvas" style="display:none">
-        </canvas>
-      </div>
+              </div>
+            </div>
+            <div class="contentarea text-center text-md-start">
+              <div class="camera mt-3">
+                <video id="video">Video stream not available.</video>
+                <div class="camera-buttons">
+                  <button id="startbutton">Fotoğraf çek</button>
+                  <button id="reset">Fotoğrafı sil</button>
+                </div>
+              </div>
+              <canvas id="canvas" style="display:none">
+              </canvas>
+            </div>
 
 
-      <div class="tacbox">
-        <input id="checkbox" type="checkbox" />
-        <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+            <form class="kahve-form needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Mesleğin</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+                <div class="invalid-feedback">
+                  Lütfen mesleğini gir.
+                </div>
+              </div>
+              <div class="col-md-4 pt-3">
+                <label for="validationCustom02" class="form-label">Yaşadığın Şehir</label>
+                <input type="text" class="form-control" id="validationCustom02" required>
+                <div class="invalid-feedback">
+                  Lütfen yaşadığın şehri gir.
+                </div>
+              </div>
+
+              <div class="col-md-4 pt-3">
+                <label for="validationCustom03" class="form-label">Yaşın</label>
+                <input type="number" class="form-control" id="validationCustom03" required min="18" max="99">
+                <div class="invalid-feedback">
+                  Lütfen rakamla yaşını gir. (18 yaş üstü)
+                </div>
+              </div>
+
+              <div class="d-flex flex-row pt-4">
+                <div class="col-6 col-md-4">
+                  <select class="form-select" id="validationCustom04" aria-label="Cinsiyetin" required>
+                    <option selected disabled value="">Cinsiyetin..</option>
+                    <option value="1">Kadın</option>
+                    <option value="2">Erkek</option>
+                    <option value="3">Diğer</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Lütfen cinsiyetini seç.
+                  </div>
+                </div>
+                <div class="form-check align-self-center ms-4">
+                  <input class="form-check-input" type="checkbox" value="" id="validationCustom05">
+                  <label class="form-check-label" for="validationCustom05">
+                    LGBTIQ
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="col-6 col-md-4 pt-3">
+                <label for="validationCustom06" class="form-label">İlişki Durumun</label>
+                <select class="form-select" id="validationCustom06" aria-describedby="İlişki durumu" required>
+                  <option selected disabled value="">Seçiniz...</option>
+                  <option value="1">İlişkisi yok</option>
+                  <option value="2">İlişkisi var</option>
+                  <option value="3">Platonik</option>
+                  <option value="4">Nişanlı</option>
+                  <option value="5">Evli</option>
+                  <option value="6">Dul</option>
+                  <option value="7">Boşanmış</option>
+                  <option value="8">Ayrı yaşıyor</option>
+                  <option value="9">Karmaşık</option>
+                </select>
+                <div class="invalid-feedback">
+                  Lütfen ilişki durumunu belirt.
+                </div>
+              </div>
+
+              <div class="col-12 col-md-9 pt-3">
+                <label for="validationCustom07" class="form-label">Spesifik Soru</label>
+                <textarea class="form-control" id="validationCustom07"
+                  placeholder="Lütfen öğrenmek istediğin konuyu paylaş." required></textarea>
+                <div class="invalid-feedback">
+                  Lütfen spesifik sorunu gir.
+                </div>
+              </div>
+
+
+              <div class="col-6 col-md-4 pt-3">
+                <label for="validationCustom08" class="form-label">Yorum türünü seç</label>
+                <select class="form-select" id="validationCustom08" aria-describedby="İlişki durumu" required>
+                  <option selected value="1">Yazılı</option>
+                  <option value="2">Sözlü</option>
+                </select>
+                <div class="invalid-feedback">
+                  Lütfen yorum türünü seç.
+                </div>
+              </div>
+
+              <div class="col-12 pt-3">
+                <h4 class="fs-5">Yorumunuz havuza düşsün mü? (Başka yorumcu bakabilir)</h4>
+                <div class="single-checkbox">
+                  <input class="form-check-input" type="checkbox" value="" id="havuz">
+                  <label class="form-check-label" for="havuz">
+                    Falınız söz verilen sürenin sonunda yorumlanmamışsa havuza düşer ve uygun bir yorumcuya
+                    devredilir.
+                  </label>
+
+                </div>
+              </div>
+
+
+              <div class="col-12 pt-3">
+                <h4 class="fs-5">Kullanım Koşulları</h4>
+                <div class="form-check single-checkbox">
+                  <input class="form-check-input" type="checkbox" value="" id="koşullar" required>
+                  <label class="form-check-label" for="koşullar">
+                    <a href="#">Kullanım Koşullarını</a> okuduğumu ve kabul ettiğimi beyan ederim.
+                  </label>
+                  <div class="invalid-feedback">
+                    Kullanım koşullarını kabul etmelisiniz.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 pt-3 mb-5">
+                <button class="btn btn-primary" type="submit">Devam Et</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-
   </main>
 
   <!-- FOOTER -->
@@ -206,7 +323,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="js/animation/loadingScreen.js"></script>
-  <script src="js/animation/camera.js"></script>
+  <script src="js/animation/form.js"></script>
 </body>
 
 </html>

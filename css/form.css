@@ -1,0 +1,128 @@
+.yorumcu {
+}
+.yorumcu h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.yorumcu p {
+  font-size: 1rem;
+}
+
+.kahve-wrapper {
+  background-color: #fffafa;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.kahve-form .form-control {
+  background-color: white;
+}
+.kahve-form label {
+  font-weight: 600;
+}
+
+.single-checkbox label {
+  display: inline;
+  font-weight: 400;
+}
+
+.single-checkbox a {
+  text-decoration: none;
+}
+
+/*radio buttons*/
+.rad-label {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, 0.14);
+}
+
+.rad-input {
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100px;
+  /* border-radius: 50%; */
+  background: linear-gradient(
+    to right bottom,
+    rgba(28, 187, 237, 1),
+    rgba(27, 41, 133, 1)
+  );
+}
+
+.rad-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+  border-radius: inherit;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 900;
+
+  transition: 0.3s;
+}
+
+.rad-input:checked ~ .rad-text {
+  color: rgba(27, 41, 133, 1);
+}
+
+/*photo */
+
+.camera {
+  position: relative;
+}
+
+.camera-buttons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.photo-upload {
+  cursor: pointer;
+}
+
+.photo-upload img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.upload-computer {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .camera-buttons {
+    left: 2rem;
+  }
+}

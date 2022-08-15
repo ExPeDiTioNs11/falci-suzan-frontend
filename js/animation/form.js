@@ -1,4 +1,36 @@
-//WebCam
+// Webcam ya da Bilgisayar secenegine gore ilgili fotograf yukleme div'ini goster
+
+const radInputs = document.querySelectorAll('input[name="upload-options"]');
+
+radInputs.forEach((input) => {
+  input.addEventListener("click", () => {
+    if (input.id === "option-webcam") {
+      document.getElementById("computer").style.display = "none";
+      document.getElementById("webcam").style.display = "block";
+    } else {
+      document.getElementById("computer").style.display = "block";
+      document.getElementById("webcam").style.display = "none";
+    }
+  });
+});
+
+// Bilgisayardan Fotograf Yukleme
+
+const uploadPhotoEl = document.querySelectorAll(".photo-upload1");
+
+uploadPhotoEl.forEach((photo) => {
+  photo.addEventListener("change", handleFileSelect, false);
+});
+
+function handleFileSelect(e) {
+  for (const file of e.target.files) {
+    const src = URL.createObjectURL(file);
+    const preview = document.getElementById(e.target.getAttribute("data-id"));
+    preview.src = src;
+  }
+}
+
+// WebCam
 
 (() => {
   const width = 320; // We will scale the photo width to this
@@ -9,7 +41,7 @@
 
   let streaming = false;
 
-  const buttons = document.querySelectorAll(".photo-upload");
+  const buttons = document.querySelectorAll(".photo-upload2");
 
   buttons.forEach((button) => {
     button.addEventListener("click", startup, false);

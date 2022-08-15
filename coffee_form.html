@@ -58,97 +58,97 @@
     </div>
   </nav>
 
-  <main role="main">
+  <main role="main" class="kahve-fali-main">
     <div class="container my-5">
       <header>
-        <h1 class="text-center">Kahve Falı</h1>
+        <h1 class="text-center">Kahve Falı <img src="assets/images/caffee.png" alt="Kahve Falı"></h1>
       </header>
+
       <div class="container my-5">
         <div class="row">
-          <div class="yorumcu col-sm-12 col-md-6 col-lg-3 text-center">
+          <div class="yorumcu col-sm-12 col-md-6 col-lg-3 text-center pt-4">
             <h2>Seçtiğin yorumcu</h2>
             <img
               src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
               class="rounded-circle my-2" width="100">
             <p>Ali Mert Başak</p>
           </div>
-          <div class="kahve-wrapper col-sm-12 col-md-6 col-lg-9 mt-5 mt-md-0">
+          <div class="kahve-wrapper col-sm-12 col-md-6 col-lg-9 mt-5 mt-md-0 pt-4">
             <h3>Fincan Fotoğrafların</h3>
             <p>Lütfen fincanına ait 4, tabağına ait 1 fotoğraf ekle</p>
 
-            <div class="d-flex flex-row">
-              <label class="rad-label">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Bilgisayardan yükle</div>
-              </label>
-
-              <label class="rad-label">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Web kamerasıyla çek</div>
-              </label>
-
+            <div class="upload-option form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="upload-options" id="option-computer" value="computer"
+                checked>
+              <label class="form-check-label" for="inlineRadio1">Bilgisayardan yükle</label>
             </div>
+            <div class="upload-option form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="upload-options" id="option-webcam" value="webcam">
+              <label class=" form-check-label" for="inlineRadio2">Web kamerasıyla çek</label>
+            </div>
+
             <!-- Upload Photos -->
+
             <!-- Upload from Computer -->
-            <div class="upload-computer d-flex flex-row gx-3">
-              <div class="photo-upload" data-photo="1">
-                <img src="assets/images/add-photo.png" class="add-photo-btn">
-                <input id="images" name="image[]" type="file">
-              </div>
-              <div class="photo-upload" data-photo="2">
-                <img src="assets/images/add-photo.png" class="add-photo-btn">
-                <input id="images" name="image[]" type="file">
-              </div>
-              <div class="photo-upload" data-photo="3">
-                <img src="assets/images/add-photo.png" class="add-photo-btn">
-                <input id="images" name="image[]" type="file">
-              </div>
-              <div class="photo-upload" data-photo="4">
-                <img src="assets/images/add-photo.png" class="add-photo-btn">
-                <input id="images" name="image[]" type="file">
-              </div>
-              <div class="photo-upload" data-photo="5">
-                <img src="assets/images/add-photo.png" class="add-photo-btn">
-                <input id="images" name="image[]" type="file">
+
+            <div id="computer">
+              <div class="d-flex flex-row gx-3 my-3">
+                <label class="photo-upload1 pe-2">
+                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo1">
+                  <input data-id="photo1" name="image[]" type="file" style="display:none">
+                </label>
+                <label class="photo-upload1 px-2">
+                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo2">
+                  <input data-id="photo2" name="image[]" type="file" style="display:none">
+                </label>
+                <label class="photo-upload1 px-2">
+                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo3">
+                  <input data-id="photo3" name="image[]" type="file" style="display:none">
+                </label>
+                <label class="photo-upload1 px-2">
+                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo4">
+                  <input data-id="photo4" name="image[]" type="file" style="display:none">
+                </label>
+                <label class="photo-upload1 px-2">
+                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo5">
+                  <input data-id="photo5" name="image[]" type="file" style="display:none">
+                </label>
               </div>
             </div>
 
             <!-- Upload using Webcam -->
-            <div class="upload-webcam d-flex flex-row">
-              <div class="photo-upload pe-2">
-                <img src="assets/images/add-photo.png" data-photo="1" class="add-photo-btn">
-              </div>
-              <div class="photo-upload px-2">
-                <img src="assets/images/add-photo.png" data-photo="2" class="add-photo-btn">
 
-              </div>
-              <div class="photo-upload px-2">
-                <img src="assets/images/add-photo.png" data-photo="3" class="add-photo-btn">
-
-              </div>
-              <div class="photo-upload px-2">
-                <img src="assets/images/add-photo.png" data-photo="4" class="add-photo-btn">
-
-              </div>
-              <div class="photo-upload px-2">
-                <img src="assets/images/add-photo.png" data-photo="5" class="add-photo-btn">
-
-              </div>
-            </div>
-            <div class="contentarea text-center text-md-start">
-              <div class="camera mt-3">
-                <video id="video">Video stream not available.</video>
-                <div class="camera-buttons">
-                  <button id="startbutton">Fotoğraf çek</button>
-                  <button id="reset">Fotoğrafı sil</button>
+            <div id="webcam">
+              <div class="d-flex flex-row mt-3">
+                <div class="photo-upload2 pe-2">
+                  <img src="assets/images/add-photo.png" data-photo="1" class="add-photo-btn">
+                </div>
+                <div class="photo-upload2 px-2">
+                  <img src="assets/images/add-photo.png" data-photo="2" class="add-photo-btn">
+                </div>
+                <div class="photo-upload2 px-2">
+                  <img src="assets/images/add-photo.png" data-photo="3" class="add-photo-btn">
+                </div>
+                <div class="photo-upload2 px-2">
+                  <img src="assets/images/add-photo.png" data-photo="4" class="add-photo-btn">
+                </div>
+                <div class="photo-upload2 px-2">
+                  <img src="assets/images/add-photo.png" data-photo="5" class="add-photo-btn">
                 </div>
               </div>
-              <canvas id="canvas" style="display:none">
-              </canvas>
-            </div>
 
+              <div class="contentarea text-center text-md-start">
+                <div class="camera mt-3">
+                  <video id="video">Video stream not available.</video>
+                  <div class="camera-buttons">
+                    <button id="startbutton">Fotoğraf çek</button>
+                    <button id="reset">Fotoğrafı sil</button>
+                  </div>
+                </div>
+                <canvas id="canvas" style="display:none">
+                </canvas>
+              </div>
+            </div>
 
             <form class="kahve-form needs-validation" novalidate>
               <div class="col-md-4">
@@ -189,7 +189,7 @@
                 <div class="form-check align-self-center ms-4">
                   <input class="form-check-input" type="checkbox" value="" id="validationCustom05">
                   <label class="form-check-label" for="validationCustom05">
-                    LGBTIQ
+                    LGBTİQ
                   </label>
                 </div>
               </div>

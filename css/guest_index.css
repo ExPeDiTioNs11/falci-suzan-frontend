@@ -83,6 +83,29 @@
   margin-top: 3%; */
 }
 
+.banner {
+  border-radius: 8px;
+  background-color: lightgrey;
+  height: 225px;
+  position: relative;
+}
+
+.banner-text {
+  color: white;
+  font-size: 5.5rem;
+}
+.logo-wrapper {
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-fortune {
+  width: 12.5rem;
+  height: 13.5rem;
+}
 /* .login_register {
   margin-top: 20px;
   margin-right: 90px;

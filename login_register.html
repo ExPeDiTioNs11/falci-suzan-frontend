@@ -45,13 +45,20 @@
     <div class="content">
       <!--login box area-->
       <div class="container" id="loginElement">
-        <div class="wrapper">
+        <div class="login-wrapper">
           <!--login box -->
           <div class="login_inputs_area">
             <h1 class="site_name">Freelancer falcılar</h1>
             <input class="form-control" type="email" placeholder="E-mail adresiniz" aria-label="default input example">
             <input class="form-control myInput" type="password" placeholder="Şifreniz"
               aria-label="default input example">
+
+            <div class="box">
+              <input id="freelancer" type="checkbox" name="freelancer" checked>
+              <span class="check"></span>
+              <label for="freelancer">Freelancer falcıyım.</label>
+            </div>
+
             <button class="btn btn-dark login_buttons">Giriş yap</button>
             <button class="btn btn-dark login_buttons">Şifrenizi mi unuttunuz</button>
             <br>
@@ -60,7 +67,7 @@
               Hadi aramıza katıl 🎉</button>
             <!--registerShow() function call button-->
             <br>
-            <div class="btn-group login_buttons" role="group" aria-label="Basic example">
+            <div class="btn-group login_buttons mb-4" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button>
               <button type="button" class="btn btn-danger"><i class="bi bi-google"></i></button>
               <button type="button" class="btn btn-success"><i class="bi bi-pinterest"></i></button>
@@ -101,9 +108,6 @@
     <!--content div close tag-->
   </div>
   <!--hero div close tag-->
-
-
-
 
   <!--custom js scripts-->
   <script type="text/javascript" src="js/animation/login_registerSwitch.js"></script>

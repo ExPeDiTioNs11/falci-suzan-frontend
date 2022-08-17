@@ -2,14 +2,17 @@
   font-size: 0.9rem;
 }
 
-footer a {
+footer a,
+.navbar-brand {
   color: inherit;
   text-decoration: none;
   transition: all 0.3s;
 }
 
 footer a:hover,
-a:focus {
+footer a:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
   text-decoration: none;
 }
 

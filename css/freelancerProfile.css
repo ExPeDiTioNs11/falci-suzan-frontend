@@ -1,3 +1,7 @@
+body {
+  line-height: 1.8;
+}
+
 .left_div {
   float: left;
   width: 30%;
@@ -12,6 +16,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   overflow-y: auto;
+}
+
+h1 {
+  background-image: url("../assets/images/star.png");
+  background-position: 0 1.3em;
+  background-size: 10px 9px;
+  background-repeat: repeat-x;
+  padding-bottom: 1rem;
+  width: 251px;
+  color: gray;
 }
 
 /* comment css start */
@@ -179,6 +193,40 @@ ul li {
 .rozet {
   width: 60px;
   height: 60px;
+}
+
+.comments img {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.comments-icons img {
+  width: 1rem;
+}
+
+.img-wrapper {
+  background-color: #ffc720;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.05s linear;
+}
+
+.img-wrapper:hover {
+  transform: scale(1.2);
+}
+
+.img-wrapper:active {
+  transform: scale(1);
+}
+
+/* Telefon */
+@media screen and (max-width: 768px) {
+  .review-list {
+    margin-left: -2rem;
+  }
 }
 
 /* Telefon Yatay Mod */

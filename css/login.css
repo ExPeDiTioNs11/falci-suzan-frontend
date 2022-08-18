@@ -195,6 +195,5 @@ body {
   background-image: url("../assets/images/check.svg");
   background-repeat: no-repeat;
   background-position: center;
-  /* transition-delay: 0.2s !important; */
   transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
 }

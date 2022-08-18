@@ -52,13 +52,6 @@
             <input class="form-control" type="email" placeholder="E-mail adresiniz" aria-label="default input example">
             <input class="form-control myInput" type="password" placeholder="Şifreniz"
               aria-label="default input example">
-
-            <div class="box">
-              <input id="freelancer" type="checkbox" name="freelancer" checked>
-              <span class="check"></span>
-              <label for="freelancer">Freelancer falcıyım.</label>
-            </div>
-
             <button class="btn btn-dark login_buttons">Giriş yap</button>
             <button class="btn btn-dark login_buttons">Şifrenizi mi unuttunuz</button>
             <br>
@@ -80,7 +73,7 @@
       <!--register box area-->
 
       <div class="container registerElement" id="registerElement">
-        <div class="register_inputs_area" id="registerElement">
+        <div class="register_inputs_area m-auto" id="registerElement">
           <h1 class="site_name">Freelancer falcılar</h1>
           <input class="form-control" type="text" placeholder="Adınız" aria-label="default input example">
           <!--user real name-->
@@ -96,9 +89,14 @@
           <input class="form-control myInput" type="password" placeholder="Şifre tekrarı"
             aria-label="default input example">
           <!--user re-password-->
+          <div class="box">
+            <input id="freelancer" type="checkbox" name="freelancer" checked>
+            <span class="check"></span>
+            <label for="freelancer">Freelancer falcıyım.</label>
+          </div>
           <button class="btn btn-dark login_buttons">Kayıt Ol</button>
           <br>
-          <button class="btn btn-dark login_buttons" type="button" onclick="loginShow()">Zaten üye misiniz? Giriş
+          <button class="btn btn-dark login_buttons mb-4" type="button" onclick="loginShow()">Zaten üye misiniz? Giriş
             yapın 🤙</button>
           <!--registerShow() function call button-->
         </div> <!-- register inputs area close tag-->

@@ -92,9 +92,9 @@
   color: rgba(27, 41, 133, 1);
 }
 
-.upload-option .form-check-input:checked {
+/* .upload-option .form-check-input:checked {
   background-color: yellowgreen;
-}
+} */
 
 /*photo */
 
@@ -119,6 +119,7 @@
 .kahve-fali-main input[type="checkbox"],
 .kahve-fali-main input[type="radio"] {
   cursor: pointer;
+  font-weight: 600;
 }
 
 .photo-upload2 img,

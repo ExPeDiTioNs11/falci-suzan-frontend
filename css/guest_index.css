@@ -79,14 +79,12 @@
 
 .header {
   font-family: "Lobster", cursive;
-  /* margin-left: 5%;
-  margin-top: 3%; */
 }
 
 .banner {
   border-radius: 8px;
   background-color: lightgrey;
-  height: 225px;
+  padding: 2rem;
   position: relative;
 }
 
@@ -94,23 +92,52 @@
   color: white;
   font-size: 5.5rem;
 }
+
+.logo-banner {
+  width: 10rem;
+  height: 10rem;
+}
 .logo-wrapper {
   border-radius: 50%;
   background-color: white;
+  overflow: hidden;
+  width: 16.5rem;
+  height: 16.3rem;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
 .logo-fortune {
-  width: 12.5rem;
-  height: 13.5rem;
+  width: 16.5rem;
+  height: 18.5rem;
 }
-/* .login_register {
-  margin-top: 20px;
-  margin-right: 90px;
-  float: right;
-} */
+
+.kategoriler {
+  height: 100%;
+}
+
+.kategoriler .nav-item {
+  border-radius: 0.25rem;
+}
+
+.kategoriler button {
+  color: white;
+}
+.kategoriler a:active {
+  background-color: #0a58ca;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: inherit;
+}
 
 .fal_türleri {
   margin-top: 2%;
@@ -201,9 +228,24 @@
   border-radius: 15px;
 }
 /*Telefon*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .ilan {
     width: 100%;
+  }
+
+  .logo-wrapper {
+    width: 6.5rem;
+    height: 6.3rem;
+    position: initial;
+  }
+
+  .logo-fortune {
+    width: 6.5rem;
+    height: 7.5rem;
+  }
+
+  .kategoriler {
+    height: initial;
   }
 }
 /*Tablet*/

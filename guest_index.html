@@ -11,13 +11,18 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/importTools.css">
   <!--tools import (google fonts and bootstrap icons)-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/guest_index.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/secondCard.css">
   <link rel="stylesheet" href="css/loadingScreen.css">
 </head>
 
-<body>
+<body class="guest_index_body">
   <!-- Loading Screen Modal -->
   <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -1216,12 +1221,56 @@
       </div>
       <!-- Danismanlik Tabı Icerik -->
       <div class="tab-pane fade" id="pills-danışmanlık" role="tabpanel" aria-labelledby="pills-danışmanlık-tab">
-        <p>NUMEROLOJI</p>
-        <p>YASAM KOCU</p>
-        <p>NEFES KOCU</p>
-        <p>ILISKI KOCU</p>
-        <p>CAKRA TERAPISTI</p>
-        <p>ENERJI TERAPISTI</p>
+        <div class="danismanlik container d-flex flex-row justify-content-around align-items-center mt-3">
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color: #DEC7E0">
+                <img src="assets/images/numeroloji.svg">
+                <p>Numeroloji</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color: #DEF0E0;">
+                <img src="assets/images/yasam.svg">
+                <p>Yaşam Koçu</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color: #D9EAF7">
+                <img src="assets/images/nefes.svg">
+                <p>Nefes Koçu</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color: #E9DBEC">
+                <img src="assets/images/iliski.svg">
+                <p>İlişki Koçu</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color:#FFFBD8">
+                <img src="assets/images/cakra.svg">
+                <p>Çakra Terapisti</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-cards-wrapper">
+            <a href="">
+              <div class="small-cards" style="background-color: #F6E3C7">
+                <img src="assets/images/enerji.svg">
+                <p>Enerji Terapisti</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </main>

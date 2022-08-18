@@ -1,3 +1,7 @@
+.guest_index_body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .all_blog_btn {
   height: 267px;
   width: 200px;
@@ -139,6 +143,41 @@
   color: inherit;
 }
 
+.danismanlik {
+  border-radius: 15px;
+  padding: 10px;
+  height: 20rem;
+}
+
+.small-cards-wrapper a {
+  text-decoration: none;
+}
+
+.small-cards {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 12rem;
+  height: 16rem;
+  box-shadow: 1px 1px 3px 1px lightgrey;
+  transition: transform 0.2s linear;
+}
+.small-cards img {
+  margin-bottom: 1.5rem;
+}
+
+.small-cards:hover {
+  transform: scale(1.1);
+}
+
+.small-cards p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #263577;
+}
+
 .fal_türleri {
   margin-top: 2%;
   /* display: flex; */
@@ -258,6 +297,29 @@
 @media screen and (max-width: 992px) {
   .carousel-inner {
     height: 100%;
+  }
+
+  .danismanlik {
+    flex-wrap: wrap;
+    height: 100%;
+    /* overflow-x: scroll; */
+  }
+
+  .small-cards-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .small-cards {
+    padding: 0.5rem;
+    width: 10rem;
+  }
+
+  .small-cards img {
+    width: 100%;
+  }
+
+  .small-cards p {
+    font-size: 1rem;
   }
 
   .fill {

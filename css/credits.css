@@ -61,6 +61,11 @@ header p {
   font-weight: bolder;
   transform: scale(1.1);
 }
+
+.buy-info-button-large a{
+  color:white;
+  text-decoration: none
+}
 .buy-info-button-large a:hover {
   color: inherit;
 }

@@ -129,9 +129,45 @@ body {
   margin-top: 10px !important;
 }
 
-@media only screen and (max-width: 600px) {
-  .search-box input[type="text"]:focus,
-  .search-box input[type="text"]:not(:placeholder-shown) {
-    width: 150px;
+.user-credit {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #1b2985;
+  text-decoration-color: #1b2985;
+  text-underline-position: from-font;
+  font-weight: 900;
+}
+
+.buy-credit {
+  position: relative;
+  transition: transform 0.1s linear;
+}
+
+.buy-credit a {
+  text-decoration: underline;
+  text-underline-position: under;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+  color: inherit;
+}
+.buy-credit:hover {
+  transform: scale(1.2);
+}
+
+.buy-credit a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  -webkit-text-decoration-color: white;
+  text-decoration-color: white;
+}
+
+.user-index {
+  margin-bottom: 1.8rem;
+  margin-top: 4.3rem;
+}
+
+/* Telefon */
+@media screen and (max-width: 768px) {
+  .navbarSearch {
+    margin: auto;
   }
 }

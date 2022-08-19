@@ -136,6 +136,7 @@
 .nav-pills .show > .nav-link {
   width: 100%;
   height: 100%;
+  background-color: #263577;
 }
 
 .nav-link:focus,
@@ -180,26 +181,29 @@
 
 .fal_türleri {
   margin-top: 2%;
-  /* display: flex; */
-  /* flex-direction: row; */
   background-color: #2531e115;
   border-radius: 15px;
   padding: 10px;
 }
 
+.fal {
+  flex-wrap: wrap;
+}
+.fal_türleri img {
+  width: 64px;
+  height: 64px;
+}
+
 .fal_type_button {
   background-color: transparent;
   border-radius: 15px;
-  width: 200px;
-  height: 100px;
-  font-weight: bold;
-  font-size: 30px;
+  /* width: 200px;
+  height: 100px; */
   transition: 0.5s;
 }
 
 .fal_type_button:hover {
   border: 1px solid rgb(131, 57, 199);
-  transition: 0.5s;
 }
 
 /* float: left; */

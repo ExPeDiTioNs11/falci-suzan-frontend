@@ -145,10 +145,6 @@
   left: 0;
 }
 
-/* .kategoriler .nav-link {
-  color: yellowgreen;
-} */
-
 @media screen and (max-width: 768px) {
   .camera-buttons {
     left: 2rem;

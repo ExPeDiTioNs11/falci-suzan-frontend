@@ -87,7 +87,8 @@
 
 .banner {
   border-radius: 8px;
-  background-color: lightgrey;
+  background-color: #edeefd;
+  /* background-color: #dbdae8; */
   padding: 2rem;
   position: relative;
 }
@@ -126,17 +127,51 @@
 }
 
 .kategoriler button {
-  color: white;
-}
-.kategoriler a:active {
-  background-color: #0a58ca;
+  color: #dbdae8;
+  /* font-weight: 900; */
 }
 
+.btn-danger {
+  /* background-color: #c9050b; */
+  /* background-image: linear-gradient(144deg, #af40ff, #1b2985 50%, #1cbbed); */
+  /* #1cbbed yerine #00DDEB */
+  padding: 0.2rem;
+  background-image: linear-gradient(144deg, #af40ff, #1b2985 50%, #1cbbed);
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+}
+
+.btn-danger:active,
+.btn-danger:hover {
+  outline: 0;
+  background-image: linear-gradient(144deg, #1cbbed, #1b2985 50%, #af40ff);
+}
+
+.kategoriler a:active {
+  background-color: #1b2985;
+}
+
+.nav-pills,
+.nav-link {
+  /* */
+}
+
+.nav-pills:hover,
+.nav-link:hover {
+  background: none;
+}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   width: 100%;
   height: 100%;
-  background-color: #263577;
+  background-color: rgb(5, 6, 45);
+  /* background-image: linear-gradient(144deg, #af40ff, #1b2985 50%, #1cbbed); */
+  transition: background 500ms linear;
+  /* background-color: rgb(5, 6, 45); */
+  /* background-color: #1b2985; */
+
+  /* background-color: #263577; */
 }
 
 .nav-link:focus,
@@ -148,6 +183,9 @@
   border-radius: 15px;
   padding: 10px;
   height: 20rem;
+}
+.small-cards-wrapper {
+  margin-right: 1rem;
 }
 
 .small-cards-wrapper a {
@@ -308,9 +346,8 @@
   }
 
   .danismanlik {
-    flex-wrap: wrap;
     height: 100%;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
   }
 
   .small-cards-wrapper {

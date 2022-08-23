@@ -179,15 +179,20 @@
   color: inherit;
 }
 
-.tabs-wrapper {
-  border-radius: 15px;
-  padding: 10px;
-  /* height: 20rem; */
-  height: 100%;
+.tabs-wrapper .small-cards {
+  padding: 1.5rem;
 }
 
-.danismanlik .small-cards {
-  padding: 1.5rem;
+.small-images img {
+  width: 82px;
+}
+
+.small-images .small-cards {
+  width: 9rem;
+  /* height: 10rem; */
+  height: 215px;
+  /* width: 12rem;
+  height: 14rem; */
 }
 
 .small-cards-wrapper {
@@ -235,27 +240,7 @@
   padding: 1rem 0.5rem;
   /* padding: 10px; */
 }
-.small-images {
-  /*  white-space: nowrap;
-  overflow-x: auto; */
-}
 
-.small-images p {
-  /* white-space: pre-wrap; */
-  /* margin-top: 1rem; */
-}
-
-.small-images img {
-  width: 82px;
-}
-
-.small-images .small-cards {
-  width: 9rem;
-  /* height: 10rem; */
-  height: 215px;
-  /* width: 12rem;
-  height: 14rem; */
-}
 .fal {
   flex-wrap: wrap;
 }
@@ -339,6 +324,10 @@
     width: 100%;
   }
 
+  .tabs-wrapper {
+    overflow-x: scroll;
+  }
+
   .logo-wrapper {
     width: 6.5rem;
     height: 6.3rem;
@@ -360,15 +349,16 @@
     width: 70%;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .tabs-wrapper {
+    overflow-x: scroll;
+  }
+}
 /*Telefon, Tablet portre modu*/
 @media screen and (max-width: 992px) {
   .carousel-inner {
     height: 100%;
-  }
-
-  .tabs-wrapper {
-    height: 100%;
-    overflow-x: scroll;
   }
 
   .small-cards-wrapper {
@@ -377,16 +367,12 @@
 
   .small-cards {
     padding: 0.5rem;
-    width: 10rem;
+    width: 12rem;
+    height: 265px;
   }
 
   .small-cards img {
-    width: 100%;
     padding-top: 0;
-  }
-
-  .small-images .small-cards {
-    height: 256px;
   }
 
   .fill {

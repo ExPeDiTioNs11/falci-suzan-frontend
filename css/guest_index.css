@@ -31,6 +31,11 @@
   padding-left: 15px; */
 }
 
+.main_btn:hover {
+  background-color: #389bf1 !important;
+  color: black;
+}
+
 .profile_card {
   display: flex;
   flex-direction: column;
@@ -152,11 +157,6 @@
   background-color: #1b2985;
 }
 
-.nav-pills,
-.nav-link {
-  /* */
-}
-
 .nav-pills:hover,
 .nav-link:hover {
   background: none;
@@ -179,11 +179,17 @@
   color: inherit;
 }
 
-.danismanlik {
+.tabs-wrapper {
   border-radius: 15px;
   padding: 10px;
-  height: 20rem;
+  /* height: 20rem; */
+  height: 100%;
 }
+
+.danismanlik .small-cards {
+  padding: 1.5rem;
+}
+
 .small-cards-wrapper {
   margin-right: 1rem;
 }
@@ -218,24 +224,41 @@
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
-  color: #263577;
+  color: black;
+  /* color: #263577; */
 }
 
 .fal_türleri {
   margin-top: 2%;
   background-color: #2531e115;
   border-radius: 15px;
-  padding: 10px;
+  padding: 1rem 0.5rem;
+  /* padding: 10px; */
+}
+.small-images {
+  /*  white-space: nowrap;
+  overflow-x: auto; */
 }
 
+.small-images p {
+  /* white-space: pre-wrap; */
+  /* margin-top: 1rem; */
+}
+
+.small-images img {
+  width: 82px;
+}
+
+.small-images .small-cards {
+  width: 9rem;
+  /* height: 10rem; */
+  height: 215px;
+  /* width: 12rem;
+  height: 14rem; */
+}
 .fal {
   flex-wrap: wrap;
 }
-.fal_türleri img {
-  width: 64px;
-  height: 64px;
-}
-
 .fal_type_button {
   background-color: transparent;
   border-radius: 15px;
@@ -248,22 +271,20 @@
   border: 1px solid rgb(131, 57, 199);
 }
 
-/* float: left; */
-/*
-  .blog_content {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
-
 .card-text {
   background-color: white;
 }
 
 .blog_card {
   margin-bottom: 20px;
+}
+/* .login_register > .login_btn {
+  background-color: #dbdae8;
+} */
+
+.btn-secondary {
+  color: inherit;
+  background-color: #dbdae8;
 }
 
 .login_btn {
@@ -345,7 +366,7 @@
     height: 100%;
   }
 
-  .danismanlik {
+  .tabs-wrapper {
     height: 100%;
     overflow-x: scroll;
   }
@@ -361,10 +382,11 @@
 
   .small-cards img {
     width: 100%;
+    padding-top: 0;
   }
 
-  .small-cards p {
-    font-size: 1rem;
+  .small-images .small-cards {
+    height: 256px;
   }
 
   .fill {

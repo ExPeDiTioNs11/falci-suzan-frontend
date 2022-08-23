@@ -170,4 +170,8 @@ body {
   .navbarSearch {
     margin: auto;
   }
+
+  .danismanlik {
+    overflow-x: scroll;
+  }
 }

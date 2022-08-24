@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelancer Fal Tarot</title>
+  <!--bootstrap 5 css import-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/importTools.css">
+  <!--tools import (google fonts and bootstrap icons)-->
+
+  <link rel="stylesheet" href="css/user_index.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/guest_index.css">
+  <link rel="stylesheet" href="css/secondCard.css">
+  <link rel="stylesheet" href="css/loadingScreen.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <!-- Loading Screen Modal -->
+
+  <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="container-fluid preloader" id="preloader">
+          <div class="row beans">
+          </div>
+          <div class="row grinder">
+          </div>
+          <div class="row grinder_bottom">
+          </div>
+          <div class="row v60">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid mx-3">
+      <a class="navbar-brand" href="#"> <span class="site_name">Freelancer falcılar</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbarSearch">
+        <form class="search-box">
+          <input type="text" placeholder=" " />
+          <button type="reset"></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main role="main" class="kahve-fali-main">
+    <div class="container my-5">
+      <header>
+        <h1 class="text-center">Tarot Falı <img src="assets/images/tarot.png" alt="Kahve Falı"></h1>
+      </header>
+
+      <div class="container my-5">
+        <div class="row">
+          <div class="yorumcu col-sm-12 col-md-6 col-lg-3 text-center pt-4">
+            <h2>Seçtiğin yorumcu</h2>
+            <img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              class="rounded-circle my-2" width="100">
+            <p>Ali Mert Başak</p>
+          </div>
+          <div class="form-wrapper col-sm-12 col-md-6 col-lg-9 mt-5 mt-md-0 pt-4">
+            <h3>Kartları seç</h3>
+            <p>Açılımını seç ve ardından kartlarını seç</p>
+
+            <div class="tarot-reading-option form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tarot-reading-options" id="option-genel"
+                value="genel-acilimi" checked>
+              <label class="form-check-label" for="option-genel">Genel</label>
+            </div>
+            <div class="tarot-reading-option form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tarot-reading-options" id="option-genel""
+                value=" iliski-acilimi">
+              <label class=" form-check-label" for="option-genel">İlişki</label>
+            </div>
+            <div class="tarot-reading-option form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tarot-reading-options" id="option-karar"
+                value="karar-acilimi">
+              <label class=" form-check-label" for="option-karar">Karar</label>
+            </div>
+
+            <div class="container-fluid">
+              <div class="tarot-header d-flex flex-row justify-content-around">
+                <p>Toplam kart: <span class="total-cards"></span></p>
+                <p>Lütfen <span class="">7</span> kart seç.</p>
+              </div>
+
+              <div class="d-flex flex-row flex-wrap gap-3 mb-3">
+
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+                <div class="tarot-cards">
+                  <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                </div>
+
+              </div>
+
+              <!-- ALTERNATIF KART DAGILIMI -->
+              <p>Toplam kart: <span class="total-cards-alternative"></span></p>
+              <p>Lütfen <span class="tarot-cards-remaining">7</span> kart seç.</p>
+              <div class="tarot-cards-wrapper">
+
+                <div class="d-flex flex-row flex-wrap gap-3 mb-3">
+
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+                  <div class="tarot-cards-alternative">
+                    <img src="./assets/images/tarot-kartlari/arka yüz.png">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <form class="kahve-form needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Mesleğin</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+                <div class="invalid-feedback">
+                  Lütfen mesleğini gir.
+                </div>
+              </div>
+              <div class="col-md-4 pt-3">
+                <label for="validationCustom02" class="form-label">Yaşadığın Şehir</label>
+                <input type="text" class="form-control" id="validationCustom02" required>
+                <div class="invalid-feedback">
+                  Lütfen yaşadığın şehri gir.
+                </div>
+              </div>
+
+              <div class="col-md-4 pt-3">
+                <label for="validationCustom03" class="form-label">Yaşın</label>
+                <input type="number" class="form-control" id="validationCustom03" required min="18" max="99">
+                <div class="invalid-feedback">
+                  Lütfen rakamla yaşını gir. (18 yaş üstü)
+                </div>
+              </div>
+
+              <div class="d-flex flex-row pt-4">
+                <div class="col-6 col-md-4">
+                  <select class="form-select" id="validationCustom04" aria-label="Cinsiyetin" required>
+                    <option selected disabled value="">Cinsiyetin..</option>
+                    <option value="1">Kadın</option>
+                    <option value="2">Erkek</option>
+                    <option value="3">Diğer</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Lütfen cinsiyetini seç.
+                  </div>
+                </div>
+                <div class="form-check align-self-center ms-4">
+                  <input class="form-check-input" type="checkbox" value="" id="validationCustom05">
+                  <label class="form-check-label" for="validationCustom05">
+                    LGBTİQ
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="col-6 col-md-4 pt-3">
+                <label for="validationCustom06" class="form-label">İlişki Durumun</label>
+                <select class="form-select" id="validationCustom06" aria-describedby="İlişki durumu" required>
+                  <option selected disabled value="">Seçiniz...</option>
+                  <option value="1">İlişkisi yok</option>
+                  <option value="2">İlişkisi var</option>
+                  <option value="3">Platonik</option>
+                  <option value="4">Nişanlı</option>
+                  <option value="5">Evli</option>
+                  <option value="6">Dul</option>
+                  <option value="7">Boşanmış</option>
+                  <option value="8">Ayrı yaşıyor</option>
+                  <option value="9">Karmaşık</option>
+                </select>
+                <div class="invalid-feedback">
+                  Lütfen ilişki durumunu belirt.
+                </div>
+              </div>
+
+              <div class="col-12 col-md-9 pt-3">
+                <label for="validationCustom07" class="form-label">Spesifik Soru</label>
+                <textarea class="form-control" id="validationCustom07"
+                  placeholder="Lütfen öğrenmek istediğin konuyu paylaş." required></textarea>
+                <div class="invalid-feedback">
+                  Lütfen spesifik sorunu gir.
+                </div>
+              </div>
+
+
+              <div class="col-6 col-md-4 pt-3">
+                <label for="validationCustom08" class="form-label">Yorum türünü seç</label>
+                <select class="form-select" id="validationCustom08" aria-describedby="İlişki durumu" required>
+                  <option selected value="1">Yazılı</option>
+                  <option value="2">Sözlü</option>
+                </select>
+                <div class="invalid-feedback">
+                  Lütfen yorum türünü seç.
+                </div>
+              </div>
+
+              <div class="col-12 pt-3">
+                <h4 class="fs-5">Yorumunuz havuza düşsün mü? (Başka yorumcu bakabilir)</h4>
+                <div class="single-checkbox">
+                  <input class="form-check-input" type="checkbox" value="" id="havuz">
+                  <label class="form-check-label" for="havuz">
+                    Falınız söz verilen sürenin sonunda yorumlanmamışsa havuza düşer ve uygun bir yorumcuya
+                    devredilir.
+                  </label>
+
+                </div>
+              </div>
+
+
+              <div class="col-12 pt-3">
+                <h4 class="fs-5">Kullanım Koşulları</h4>
+                <div class="form-check single-checkbox">
+                  <input class="form-check-input" type="checkbox" value="" id="koşullar" required>
+                  <label class="form-check-label" for="koşullar">
+                    <a href="#">Kullanım Koşullarını</a> okuduğumu ve kabul ettiğimi beyan ederim.
+                  </label>
+                  <div class="invalid-feedback">
+                    Kullanım koşullarını kabul etmelisiniz.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 pt-3 mb-5">
+                <button class="btn btn-primary" type="submit">Devam Et</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-100 py-4 mt-5 flex-shrink-0">
+    <div class="container py-4">
+      <div class="row gy-4 gx-5">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 text-white">FB.</h5>
+          <p class="small text-muted" style="background-color: transparent;">Fal ve bir çok yorum çeşitlerine
+            uzmanlarından ulaşabileceğiniz web sitemiz ile yorumlarınız sizinle olsun</p>
+          <p class="small text-muted mb-0" style="background-color: transparent;">&copy; Tüm hakları frelancer Fal
+            tarafından saklıdır <a class="text-primary" href="#">freelancerfal.com</a></p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Hızlı Linkler</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#">Tarot Falcıları</a></li>
+            <li><a href="#">Kahve Falcıları</a></li>
+            <li><a href="#">Deste Falcıları</a></li>
+            <li><a href="#">Rüya Yorumcuları</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Hızlı Linkler</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">Nasıl İşler?</a></li>
+            <li><a href="#">Gizlilik Sözleşmesi</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-white mb-3">Kampanya ve Haberler</h5>
+          <p class="small text-muted" style="background-color: transparent;">Kampanyalarımızdan e-posta yolu ile
+            haberdar olmak isterseniz lütfen e-posta adresinizi girin.</p>
+          <form action="#">
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="E-Posta adresiniz" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+              <button class="btn btn-primary" id="button-addon2" type="button"><i class="bi bi-send-fill"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--bootstrap 5 scripts and poopers-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="js/animation/loadingScreen.js"></script>
+  <script src="js/animation/tarotForm.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+//KAHVE FORMU
+
 // Webcam ya da Bilgisayar secenegine gore ilgili fotograf yukleme div'ini goster
 
 const radInputs = document.querySelectorAll('input[name="upload-options"]');

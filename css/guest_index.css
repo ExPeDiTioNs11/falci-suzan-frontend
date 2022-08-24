@@ -92,8 +92,8 @@
 
 .banner {
   border-radius: 8px;
-  background-color: #edeefd;
-  /* background-color: #dbdae8; */
+  /* background-color: #edeefd; */
+  background-color: #dbdae8;
   padding: 2rem;
   position: relative;
 }
@@ -235,7 +235,9 @@
 
 .fal_türleri {
   margin-top: 2%;
-  background-color: #2531e115;
+  /* background-color: #2531e115; */
+  background-color: #dbdae8;
+  /* background-color: #edeefd; */
   border-radius: 15px;
   padding: 1rem 0.5rem;
   /* padding: 10px; */

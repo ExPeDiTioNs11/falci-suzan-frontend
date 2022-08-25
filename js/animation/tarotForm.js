@@ -14,32 +14,40 @@ totalCards.textContent = cards.length;
 
 let remainingCards = 7;
 
+cards.forEach((card) => {
+  let randomPosition = Math.floor(Math.random() * cards.length);
+  card.style.order = randomPosition;
+});
+cardsSpread.forEach((card) => {
+  let randomPosition = Math.floor(Math.random() * cardsSpread.length);
+  card.style.order = randomPosition;
+  cardShuffled = true;
+  spreadCards();
+});
+
 //Spread Alternative Cards
 
 totalCardsAlternative.textContent = cardsSpread.length;
 
-// window.onload = shuffle();
-spreadCards();
+//window.onload = shuffle();
+//spreadCards();
 
 function spreadCards() {
   let leftPosition = 0;
   let rotateDegree = -9;
   let translateDegree = 0;
 
-  cardsSpread.forEach((card) => {
-    let randomPosition = Math.floor(Math.random() * cardsSpread.length);
-    card.style.order = randomPosition;
-    console.log(`card id: ${card.id} and card order: ${card.style.order}`);
+  cardsSpread.forEach((card, index) => {
     card.style.left = `${leftPosition}px`;
     leftPosition +=
       (wrapper.clientWidth - card.clientWidth) / cardsSpread.length;
     card.style.transform = `rotate(${rotateDegree}deg)`;
     rotateDegree += 0.25;
 
-    if (card.id <= 38) {
+    if (index <= 38) {
       card.style.transform += `translateY(${translateDegree}rem)`;
       translateDegree -= 0.012;
-    } else if (card.id > 38) {
+    } else if (index > 38) {
       card.style.transform += `translateY(${translateDegree}rem)`;
       translateDegree += 0.012;
     }
@@ -57,29 +65,32 @@ window.onresize = function () {
 //OnClick Animation
 
 cardsSpread.forEach((card) => {
-  card.addEventListener("click", function () {
-    console.log(`card id ${card.id} and order ${card.style.order}`);
-    if (remainingCards > 0) {
-      if (card.classList.contains("selected-alternative")) {
+  if (cardShuffled) {
+    card.addEventListener("click", function () {
+      console.log(`card id ${card.card - id}  and order ${card.style.order}`);
+      if (remainingCards > 0) {
+        if (card.classList.contains("selected-alternative")) {
+          card.classList.remove("selected-alternative");
+          remainingCards++;
+        } else {
+          card.classList.add("selected-alternative");
+          remainingCards--;
+        }
+      } else if (
+        remainingCards === 0 &&
+        card.classList.contains("selected-alternative")
+      ) {
         card.classList.remove("selected-alternative");
         remainingCards++;
-      } else {
-        card.classList.add("selected-alternative");
-        remainingCards--;
       }
       selectCardsAlternative.textContent = remainingCards;
-    } else if (
-      remainingCards === 0 &&
-      card.classList.contains("selected-alternative")
-    ) {
-      card.classList.remove("selected-alternative");
-      remainingCards++;
-    }
-  });
+    });
+  }
 });
 
 cards.forEach((card) => {
   card.addEventListener("click", function () {
+    console.log(`card id ${card.id} and order ${card.style.order}`);
     if (remainingCards > 0) {
       if (card.classList.contains("selected")) {
         card.classList.remove("selected");
@@ -88,10 +99,10 @@ cards.forEach((card) => {
         card.classList.add("selected");
         remainingCards--;
       }
-      selectCards.textContent = remainingCards;
     } else if (remainingCards === 0 && card.classList.contains("selected")) {
       card.classList.remove("selected");
       remainingCards++;
     }
+    selectCards.textContent = remainingCards;
   });
 });

@@ -14,10 +14,22 @@ totalCards.textContent = cards.length;
 
 let remainingCards = 7;
 
+// Kartlarin yerini rastgele belirle
 cards.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cards.length);
   card.style.order = randomPosition;
 });
+
+//Kartlarin ters ya da duz oldugunu rastgele belirle
+
+cards.forEach((card) => {
+  const randomDegrees = [0, 180];
+  let randomDegree =
+    randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
+  console.log(randomDegree);
+  card.style.transform = `rotate(${randomDegree}deg)`;
+});
+
 cardsSpread.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cardsSpread.length);
   card.style.order = randomPosition;
@@ -89,7 +101,7 @@ cardsSpread.forEach((card) => {
 
 cards.forEach((card) => {
   card.addEventListener("click", function () {
-    console.log(`card id ${card.id} and order ${card.style.order}`);
+    // console.log(`card id ${card.id} and order ${card.style.order}`);
     if (remainingCards > 0) {
       if (card.classList.contains("selected")) {
         card.classList.remove("selected");
@@ -103,8 +115,16 @@ cards.forEach((card) => {
       remainingCards++;
     }
     selectCards.textContent = remainingCards;
+    matchWithImages();
   });
 });
+
+function matchWithImages() {
+  let selectedCards = document.querySelectorAll(".selected");
+  selectedCards.forEach((card) => {
+    console.log(card.id);
+  });
+}
 
 // Form Validasyon
 

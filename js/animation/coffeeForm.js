@@ -159,6 +159,14 @@ function handleFileSelect(e) {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+        } else {
+          const myModal = new bootstrap.Modal(
+            document.getElementById("submitFormModal"),
+            {
+              keyboard: false,
+            }
+          );
+          myModal.toggle();
         }
 
         form.classList.add("was-validated");

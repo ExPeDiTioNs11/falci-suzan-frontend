@@ -23,10 +23,10 @@
 <body>
   <!-- Loading Screen Modal -->
 
-  <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal" id="loading-screen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="loading screen modal" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
+      <div class="modal-content loading">
         <div class="container-fluid preloader" id="preloader">
           <div class="row beans">
           </div>
@@ -40,6 +40,28 @@
       </div>
     </div>
   </div>
+
+
+
+  <!-- Submit Form Modal -->
+  <div class="modal fade" id="submitFormModal" tabindex="-1" aria-labelledby="submit Form Modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Falınız seçtiğiniz yorumcuya iletilmiştir.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid mx-3">
@@ -150,7 +172,7 @@
               </div>
             </div>
 
-            <form class="kahve-form needs-validation" novalidate>
+            <form class="form-container needs-validation" novalidate>
               <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Mesleğin</label>
                 <input type="text" class="form-control" id="validationCustom01" required>
@@ -323,7 +345,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="js/animation/loadingScreen.js"></script>
-  <script src="js/animation/form.js"></script>
+  <script src="js/animation/coffeeForm.js"></script>
 </body>
 
 </html>

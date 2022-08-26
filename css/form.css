@@ -14,10 +14,10 @@
 
 /* KAHVE FORM */
 
-.kahve-form .form-control {
+.form-container .form-control {
   background-color: white;
 }
-.kahve-form label {
+.form-container label {
   font-weight: 600;
 }
 

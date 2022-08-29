@@ -169,6 +169,22 @@
   box-shadow: 0 0 0 4px #7a49a5;
 }
 
+.display-tarot-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid purple;
+  width: 200px;
+  height: 200px;
+}
+
+.display-images {
+  width: 3rem;
+}
+.display-tarot-cards > div {
+  border: 1px solid red;
+}
+
 /* Tarot Kartlari Alternatif Dagilim */
 .tarot-cards-alternative img {
   width: 4rem;

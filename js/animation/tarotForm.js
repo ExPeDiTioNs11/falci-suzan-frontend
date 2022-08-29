@@ -22,13 +22,12 @@ cards.forEach((card) => {
 
 //Kartlarin ters ya da duz oldugunu rastgele belirle
 
-cards.forEach((card) => {
-  const randomDegrees = [0, 180];
-  let randomDegree =
-    randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
-  console.log(randomDegree);
-  card.style.transform = `rotate(${randomDegree}deg)`;
-});
+// cards.forEach((card) => {
+//   const randomDegrees = [0, 180];
+//   let randomDegree =
+//     randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
+//   card.style.transform = `rotate(${randomDegree}deg)`;
+// });
 
 cardsSpread.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cardsSpread.length);
@@ -40,9 +39,6 @@ cardsSpread.forEach((card) => {
 //Spread Alternative Cards
 
 totalCardsAlternative.textContent = cardsSpread.length;
-
-//window.onload = shuffle();
-//spreadCards();
 
 function spreadCards() {
   let leftPosition = 0;
@@ -99,32 +95,53 @@ cardsSpread.forEach((card) => {
   }
 });
 
+let selectedCardsArray = [];
 cards.forEach((card) => {
   card.addEventListener("click", function () {
     // console.log(`card id ${card.id} and order ${card.style.order}`);
     if (remainingCards > 0) {
       if (card.classList.contains("selected")) {
+        selectedCardsArray = selectedCardsArray.filter((e) => e !== card.id);
         card.classList.remove("selected");
+
         remainingCards++;
       } else {
         card.classList.add("selected");
+        selectedCardsArray.push(card.id);
         remainingCards--;
       }
     } else if (remainingCards === 0 && card.classList.contains("selected")) {
       card.classList.remove("selected");
+      selectedCardsArray = selectedCardsArray.filter((e) => e !== card.id);
       remainingCards++;
     }
     selectCards.textContent = remainingCards;
+    //console.log(selectedCardsArray);
     matchWithImages();
   });
 });
 
+let divEle = document.querySelectorAll(".display-images");
+let imagesMatched = false;
+
 function matchWithImages() {
-  let selectedCards = document.querySelectorAll(".selected");
-  selectedCards.forEach((card) => {
-    console.log(card.id);
+  //console.log(selectedCardsArray);
+  selectedCardsArray.forEach(function (value, i) {
+    const randomDegrees = [0, 180];
+    let randomDegree =
+      randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
+    console.log(i + 1 + ": " + value);
+    document.getElementById(
+      `card${i}`
+    ).src = `../../assets/images/tarot-kartlari/${value}.png`;
+
+    document.getElementById(
+      `card${i}`
+    ).style.transform = `rotate(${randomDegree}deg)`;
   });
 }
+// document.getElementById(`card${selectedCardsArray.index}`).style.border =
+// "2px solid yellow";
 
 // Form Validasyon
 

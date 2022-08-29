@@ -1,10 +1,11 @@
 const cards = document.querySelectorAll(".tarot-cards");
-const wrapper = document.querySelector(".tarot-cards-wrapper");
 const totalCards = document.querySelector(".total-cards");
+const selectCards = document.querySelector(".tarot-cards-remaining");
+
+const wrapper = document.querySelector(".tarot-cards-wrapper");
 const selectCardsAlternative = document.querySelector(
   ".tarot-cards-remaining-alternative"
 );
-const selectCards = document.querySelector(".tarot-cards-remaining");
 const cardsSpread = document.querySelectorAll(".tarot-cards-alternative");
 const totalCardsAlternative = document.querySelector(
   ".total-cards-alternative"
@@ -19,15 +20,6 @@ cards.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cards.length);
   card.style.order = randomPosition;
 });
-
-//Kartlarin ters ya da duz oldugunu rastgele belirle
-
-// cards.forEach((card) => {
-//   const randomDegrees = [0, 180];
-//   let randomDegree =
-//     randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
-//   card.style.transform = `rotate(${randomDegree}deg)`;
-// });
 
 cardsSpread.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cardsSpread.length);
@@ -96,14 +88,13 @@ cardsSpread.forEach((card) => {
 });
 
 let selectedCardsArray = [];
+
 cards.forEach((card) => {
   card.addEventListener("click", function () {
-    // console.log(`card id ${card.id} and order ${card.style.order}`);
     if (remainingCards > 0) {
       if (card.classList.contains("selected")) {
-        selectedCardsArray = selectedCardsArray.filter((e) => e !== card.id);
         card.classList.remove("selected");
-
+        selectedCardsArray = selectedCardsArray.filter((e) => e !== card.id);
         remainingCards++;
       } else {
         card.classList.add("selected");
@@ -116,29 +107,28 @@ cards.forEach((card) => {
       remainingCards++;
     }
     selectCards.textContent = remainingCards;
-    //console.log(selectedCardsArray);
     matchWithImages();
   });
 });
 
-let divEle = document.querySelectorAll(".display-images");
-let imagesMatched = false;
+//Yorumcuya gonderilecek kisim
 
 function matchWithImages() {
-  //console.log(selectedCardsArray);
-  selectedCardsArray.forEach(function (value, i) {
+  selectedCardsArray.forEach(function (value, index) {
     const randomDegrees = [0, 180];
-    let randomDegree =
+    const randomDegree =
       randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
-    console.log(i + 1 + ": " + value);
-    let finalImage = document.getElementById(`card${i}`);
+    const finalImage = document.getElementById(`card${index}`);
     finalImage.src = `../../assets/images/tarot-kartlari/${value}.png`;
-
     finalImage.style.transform = `rotate(${randomDegree}deg)`;
   });
 }
-// document.getElementById(`card${selectedCardsArray.index}`).style.border =
-// "2px solid yellow";
+
+//Gosterme amacli button
+
+document.querySelector(".show-div").addEventListener("click", () => {
+  document.querySelector(".display-tarot-cards").style.display = "block";
+});
 
 // Form Validasyon
 
@@ -156,6 +146,18 @@ function matchWithImages() {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+        } else if (remainingCards !== 0) {
+          event.preventDefault();
+          event.stopPropagation();
+          selectCards.scrollIntoView();
+          const notification = document.createElement("p");
+          notification.appendChild(
+            document.createTextNode("Lütfen kart seçimini tamamla!")
+          );
+          notification.style.color = "red";
+          document
+            .getElementById("tarot-cards-remaining-text")
+            .appendChild(notification);
         } else {
           const myModal = new bootstrap.Modal(
             document.getElementById("submitFormModal"),

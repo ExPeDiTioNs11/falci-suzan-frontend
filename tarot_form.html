@@ -114,7 +114,7 @@
             <div class="">
               <div class="tarot-header d-flex flex-row justify-content-around">
                 <p>Toplam kart: <span class="total-cards"></span></p>
-                <p>Lütfen <span class="tarot-cards-remaining">7</span> kart seç.</p>
+                <p id="tarot-cards-remaining-text">Lütfen <span class="tarot-cards-remaining">7</span> kart seç.</p>
               </div>
 
               <div class="d-flex flex-row flex-wrap gap-3 mb-3">
@@ -355,16 +355,46 @@
                 </div>
 
               </div>
-
-              <!-- SECILEN KARTLAR -->
-              <div class="display-tarot-cards">
-                <img class="display-images" id="card0">
-                <img class="display-images" id="card1">
-                <img class="display-images" id="card2">
-                <img class="display-images" id="card3">
-                <img class="display-images" id="card4">
-                <img class="display-images" id="card5">
-                <img class="display-images" id="card6">
+              <button class="show-div">Yorumcuya nasil gidecegini gormek icin tiklayiniz</button>
+              <!-- SECILEN KARTLAR- Yorumcuya Gonderilecek Kisim -->
+              <div class="display-tarot-cards text-center">
+                <h3>Yorumcuya Gonderilecek Kisim</h3>
+                <div class="row my-3">
+                  <div class="col">
+                    <span>1.Kart</span>
+                    <img class="display-images" id="card0" alt="secilen tarot karti" title="1.Kart">
+                  </div>
+                  <div class="col">
+                    <span>7.Kart</span>
+                    <img class="display-images" id="card6" alt="secilen tarot karti" title="7.Kart">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <span>2.Kart</span>
+                    <img class="display-images" id="card1" alt="secilen tarot karti" title="2.Kart">
+                  </div>
+                  <div class="col">
+                    <span>6.Kart</span>
+                    <img class="display-images" id="card5" alt="secilen tarot karti" title="6.Kart">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <span>3.Kart</span>
+                    <img class="display-images" id="card2" alt="secilen tarot karti" title="3.Kart">
+                  </div>
+                  <div class="col">
+                    <span>5.Kart</span>
+                    <img class="display-images" id="card4" alt="secilen tarot karti" title="5.Kart">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <span>4.Kart</span>
+                    <img class="display-images" id="card3" alt="secilen tarot karti" title="4.Kart">
+                  </div>
+                </div>
 
                 <!-- <div class="display-images" id="card0"></div>
                 <div class="display-images" id="card1"></div>

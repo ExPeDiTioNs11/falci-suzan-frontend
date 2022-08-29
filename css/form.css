@@ -166,25 +166,23 @@
 
 .selected {
   transform: scale(1.1) !important;
-  box-shadow: 0 0 0 4px #7a49a5;
+  box-shadow: 0 0 0 4px red;
+  /* box-shadow: 0 0 0 4px #7a49a5; */
 }
 
 .display-tarot-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   border: 1px solid purple;
-  width: 200px;
-  height: 200px;
+  display: none;
 }
 
 .display-images {
-  width: 3rem;
-}
-.display-tarot-cards > div {
-  border: 1px solid red;
+  width: 5rem;
 }
 
+.display-tarot-cards span {
+  color: black;
+  font-size: larger;
+}
 /* Tarot Kartlari Alternatif Dagilim */
 .tarot-cards-alternative img {
   width: 4rem;
@@ -216,7 +214,8 @@
 
 .selected-alternative {
   transform: translateY(-1rem) !important;
-  border: 2px solid #7a49a5;
+  border: 2px solid red;
+  /* border: 2px solid #7a49a5; */
 }
 
 @media screen and (max-width: 768px) {

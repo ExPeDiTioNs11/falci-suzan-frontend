@@ -131,13 +131,10 @@ function matchWithImages() {
     let randomDegree =
       randomDegrees[Math.floor(Math.random() * randomDegrees.length)];
     console.log(i + 1 + ": " + value);
-    document.getElementById(
-      `card${i}`
-    ).src = `../../assets/images/tarot-kartlari/${value}.png`;
+    let finalImage = document.getElementById(`card${i}`);
+    finalImage.src = `../../assets/images/tarot-kartlari/${value}.png`;
 
-    document.getElementById(
-      `card${i}`
-    ).style.transform = `rotate(${randomDegree}deg)`;
+    finalImage.style.transform = `rotate(${randomDegree}deg)`;
   });
 }
 // document.getElementById(`card${selectedCardsArray.index}`).style.border =

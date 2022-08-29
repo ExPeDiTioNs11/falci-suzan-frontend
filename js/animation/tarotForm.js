@@ -1,3 +1,4 @@
+const tarotOptions = document.querySelectorAll(".tarot-reading-option");
 const cards = document.querySelectorAll(".tarot-cards");
 const totalCards = document.querySelector(".total-cards");
 const selectCards = document.querySelector(".tarot-cards-remaining");
@@ -13,13 +14,29 @@ const totalCardsAlternative = document.querySelector(
 
 totalCards.textContent = cards.length;
 
-let remainingCards = 7;
+tarotOptions.forEach((option) => {
+  option.addEventListener("change", () => {
+    shuffleCards();
+  });
+});
+
+let remainingCards;
+let selectedCardsArray;
 
 // Kartlarin yerini rastgele belirle
-cards.forEach((card) => {
-  let randomPosition = Math.floor(Math.random() * cards.length);
-  card.style.order = randomPosition;
-});
+function shuffleCards() {
+  cards.forEach((card) => {
+    if (card.classList.contains("selected")) {
+      card.classList.remove("selected");
+    }
+    selectedCardsArray = [];
+    remainingCards = 7;
+    selectCards.textContent = remainingCards;
+    let randomPosition = Math.floor(Math.random() * cards.length);
+    card.style.order = randomPosition;
+  });
+}
+shuffleCards();
 
 cardsSpread.forEach((card) => {
   let randomPosition = Math.floor(Math.random() * cardsSpread.length);
@@ -87,8 +104,6 @@ cardsSpread.forEach((card) => {
   }
 });
 
-let selectedCardsArray = [];
-
 cards.forEach((card) => {
   card.addEventListener("click", function () {
     if (remainingCards > 0) {
@@ -113,6 +128,11 @@ cards.forEach((card) => {
 
 //Yorumcuya gonderilecek kisim
 
+//Gosterme amacli button
+document.querySelector(".show-div").addEventListener("click", () => {
+  document.querySelector(".display-tarot-cards").style.display = "block";
+});
+
 function matchWithImages() {
   selectedCardsArray.forEach(function (value, index) {
     const randomDegrees = [0, 180];
@@ -123,12 +143,6 @@ function matchWithImages() {
     finalImage.style.transform = `rotate(${randomDegree}deg)`;
   });
 }
-
-//Gosterme amacli button
-
-document.querySelector(".show-div").addEventListener("click", () => {
-  document.querySelector(".display-tarot-cards").style.display = "block";
-});
 
 // Form Validasyon
 

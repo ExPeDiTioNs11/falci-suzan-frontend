@@ -157,12 +157,10 @@ function matchWithImages() {
     form.addEventListener(
       "submit",
       function (event) {
+        event.preventDefault();
+        event.stopPropagation();
         if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
         } else if (remainingCards !== 0) {
-          event.preventDefault();
-          event.stopPropagation();
           selectCards.scrollIntoView();
           const notification = document.createElement("p");
           notification.appendChild(
@@ -188,3 +186,10 @@ function matchWithImages() {
     );
   });
 })();
+
+//Redirect to Homepage on closing form modal (after submitting form)
+const myModal = document.getElementById("submitFormModal");
+
+myModal.addEventListener("hidden.bs.modal", function () {
+  location.href = "user_index.html";
+});

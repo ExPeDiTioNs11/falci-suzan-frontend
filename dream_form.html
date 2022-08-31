@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freelancer Fal Kahve</title>
+  <title>Freelancer Fal Ruya</title>
   <!--bootstrap 5 css import-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -83,7 +83,7 @@
   <main role="main" class="kahve-fali-main">
     <div class="container my-5">
       <header>
-        <h1 class="text-center">Kahve Falı <img src="assets/images/caffee.png" alt="Kahve Falı"></h1>
+        <h1 class="text-center">Rüya Yorumu <img src="assets/images/dream.png" alt="Rüya Yorumu"></h1>
       </header>
 
       <div class="container my-5">
@@ -96,83 +96,35 @@
             <p>Ali Mert Başak</p>
           </div>
           <div class="form-wrapper col-sm-12 col-md-6 col-lg-9 mt-5 mt-md-0 pt-4">
-            <h3>Fincan Fotoğrafların</h3>
-            <p>Lütfen fincanına ait 4, tabağına ait 1 fotoğraf ekle</p>
 
-            <div class="upload-option form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="upload-options" id="option-computer" value="computer"
-                checked>
-              <label class="form-check-label" for="option-computer">Bilgisayardan yükle</label>
-            </div>
-            <div class="upload-option form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="upload-options" id="option-webcam" value="webcam">
-              <label class=" form-check-label" for="option-webcam">Web kamerasıyla çek</label>
-            </div>
-
-            <!-- Upload Photos -->
-
-            <!-- Upload from Computer -->
-
-            <div id="computer">
-              <div class="d-flex flex-row gx-3 my-3">
-                <label class="photo-upload1 pe-2">
-                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo1">
-                  <input data-id="photo1" name="image[]" type="file" style="display:none">
-                </label>
-                <label class="photo-upload1 px-2">
-                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo2">
-                  <input data-id="photo2" name="image[]" type="file" style="display:none">
-                </label>
-                <label class="photo-upload1 px-2">
-                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo3">
-                  <input data-id="photo3" name="image[]" type="file" style="display:none">
-                </label>
-                <label class="photo-upload1 px-2">
-                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo4">
-                  <input data-id="photo4" name="image[]" type="file" style="display:none">
-                </label>
-                <label class="photo-upload1 px-2">
-                  <img src="assets/images/add-photo.png" class="add-photo-btn" id="photo5">
-                  <input data-id="photo5" name="image[]" type="file" style="display:none">
-                </label>
-              </div>
-            </div>
-
-            <!-- Upload using Webcam -->
-
-            <div id="webcam">
-              <div class="d-flex flex-row mt-3">
-                <div class="photo-upload2 pe-2">
-                  <img src="assets/images/add-photo.png" data-photo="1" class="add-photo-btn">
-                </div>
-                <div class="photo-upload2 px-2">
-                  <img src="assets/images/add-photo.png" data-photo="2" class="add-photo-btn">
-                </div>
-                <div class="photo-upload2 px-2">
-                  <img src="assets/images/add-photo.png" data-photo="3" class="add-photo-btn">
-                </div>
-                <div class="photo-upload2 px-2">
-                  <img src="assets/images/add-photo.png" data-photo="4" class="add-photo-btn">
-                </div>
-                <div class="photo-upload2 px-2">
-                  <img src="assets/images/add-photo.png" data-photo="5" class="add-photo-btn">
-                </div>
-              </div>
-
-              <div class="contentarea text-center text-md-start">
-                <div class="camera mt-3">
-                  <video id="video">Video stream not available.</video>
-                  <div class="camera-buttons">
-                    <button id="startbutton">Fotoğraf çek</button>
-                    <button id="reset">Fotoğrafı sil</button>
-                  </div>
-                </div>
-                <canvas id="canvas" style="display:none">
-                </canvas>
-              </div>
-            </div>
 
             <form class="form-container needs-validation" novalidate>
+              <div class="col-md-4">
+                <p>Rüyanı ne zaman gördün?</p>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="ruya-zamani" id="nighttime" value="nighttime"
+                    required>
+                  <label class="form-check-label" for="nighttime">Gece</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="ruya-zamani" id="daytime" value="daytime" required>
+                  <label class=" form-check-label" for="daytime">Gündüz</label>
+                  <div class="invalid-feedback">
+                    Lütfen rüyanı gördüğün zamanı seç.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-9 py-3">
+                <label for="dream-text" class="form-label">Rüyanı anlat</label>
+                <textarea class="form-control" id="dream-text" placeholder="Lütfen rüyanı anlatır mısın?"
+                  required></textarea>
+                <div class="invalid-feedback">
+                  Lütfen rüyanı detaylı bir şekilde anlat.
+                </div>
+              </div>
+
+
               <!-- <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Mesleğin</label>
                 <input type="text" class="form-control" id="validationCustom01" required>
@@ -239,7 +191,6 @@
                 </div>
               </div>
 
-
               <div class="col-6 col-md-4 pt-3">
                 <label for="validationCustom07" class="form-label">İlişki Durumun</label>
                 <select class="form-select" id="validationCustom07" aria-describedby="İlişki durumu" required>
@@ -259,19 +210,9 @@
                 </div>
               </div>
 
-              <div class="col-12 col-md-9 pt-3">
-                <label for="validationCustom08" class="form-label">Spesifik Soru</label>
-                <textarea class="form-control" id="validationCustom08"
-                  placeholder="Lütfen öğrenmek istediğin konuyu paylaş." required></textarea>
-                <div class="invalid-feedback">
-                  Lütfen spesifik sorunu gir.
-                </div>
-              </div>
-
-
               <!-- <div class="col-6 col-md-4 pt-3">
-                <label for="validationCustom09" class="form-label">Yorum türünü seç</label>
-                <select class="form-select" id="validationCustom09" aria-describedby="Yorum türü" required>
+                <label for="validationCustom08" class="form-label">Yorum türünü seç</label>
+                <select class="form-select" id="validationCustom08" aria-describedby="İlişki durumu" required>
                   <option selected value="1">Yazılı</option>
                   <option value="2">Sözlü</option>
                 </select>
@@ -368,7 +309,6 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="js/animation/loadingScreen.js"></script>
-  <script src="js/animation/coffeeForm.js"></script>
   <script src="js/animation/formValidation.js"></script>
 </body>
 

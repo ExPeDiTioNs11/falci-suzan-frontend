@@ -100,15 +100,15 @@
 
             <form class="form-container needs-validation" novalidate>
               <div class="col-md-4">
-                <p>Rüyanı ne zaman gördün?</p>
+                <p class="fw-bold">Rüyanı ne zaman gördün?</p>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="ruya-zamani" id="nighttime" value="nighttime"
                     required>
-                  <label class="form-check-label" for="nighttime">Gece</label>
+                  <label class="form-check-label dream-label" for="nighttime">Gece</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="ruya-zamani" id="daytime" value="daytime" required>
-                  <label class=" form-check-label" for="daytime">Gündüz</label>
+                  <label class=" form-check-label dream-label" for="daytime">Gündüz</label>
                   <div class="invalid-feedback">
                     Lütfen rüyanı gördüğün zamanı seç.
                   </div>
@@ -118,7 +118,7 @@
               <div class="col-12 col-md-9 py-3">
                 <label for="dream-text" class="form-label">Rüyanı anlat</label>
                 <textarea class="form-control" id="dream-text" placeholder="Lütfen rüyanı anlatır mısın?"
-                  required></textarea>
+                  style="height: 6rem" required></textarea>
                 <div class="invalid-feedback">
                   Lütfen rüyanı detaylı bir şekilde anlat.
                 </div>
@@ -222,7 +222,8 @@
               </div> -->
 
               <div class="col-12 pt-3">
-                <h4 class="fs-5">Yorumunuz havuza düşsün mü? (Başka yorumcu bakabilir)</h4>
+                <h4 class="fs-5 fw-bold">Yorumunuz havuza düşsün mü? <span class="fw-light">(Başka yorumcu
+                    bakabilir)</span></h4>
                 <div class="single-checkbox">
                   <input class="form-check-input" type="checkbox" value="" id="havuz">
                   <label class="form-check-label" for="havuz">
@@ -235,7 +236,7 @@
 
 
               <div class="col-12 pt-3">
-                <h4 class="fs-5">Kullanım Koşulları</h4>
+                <h4 class="fs-5 fw-bold">Kullanım Koşulları</h4>
                 <div class="form-check single-checkbox">
                   <input class="form-check-input" type="checkbox" value="" id="koşullar" required>
                   <label class="form-check-label" for="koşullar">

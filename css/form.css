@@ -1,3 +1,6 @@
+h1 img {
+  width: 4rem;
+}
 .yorumcu h2 {
   font-size: 1.2rem;
   font-weight: bold;
@@ -215,6 +218,12 @@
   transform: translateY(-1rem) !important;
   border: 2px solid red;
   /* border: 2px solid #7a49a5; */
+}
+
+/* Ruya Formu */
+
+.dream-label {
+  font-weight: 400 !important;
 }
 
 @media screen and (max-width: 768px) {

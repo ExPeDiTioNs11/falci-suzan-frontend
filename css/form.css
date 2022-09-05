@@ -1,5 +1,6 @@
 h1 img {
   width: 4rem;
+  height: 4rem;
 }
 .yorumcu h2 {
   font-size: 1.2rem;
@@ -152,28 +153,32 @@ h1 img {
   font-size: larger;
 }
 
-.tarot-cards-remaining,
-.tarot-cards-remaining-alternative {
+.all-cards-remaining,
+.all-cards-remaining-alternative {
   -webkit-text-decoration: underline #0d6efd;
   text-decoration: underline #0d6efd;
 }
 
-.tarot-cards {
+.all-cards {
   cursor: pointer;
   transition: transform 0.1s linear;
 }
 
-.tarot-cards img {
+.all-cards img {
   width: 3rem;
+  height: 5rem;
 }
 
+.reverse-rotate {
+  transform: rotate(180deg);
+}
 .selected {
   transform: scale(1.1) !important;
   box-shadow: 0 0 0 4px red;
   /* box-shadow: 0 0 0 4px #7a49a5; */
 }
 
-.display-tarot-cards {
+.display-all-cards {
   border: 1px solid purple;
   display: none;
 }
@@ -182,17 +187,17 @@ h1 img {
   width: 5rem;
 }
 
-.display-tarot-cards span {
+.display-all-cards span {
   color: black;
   font-size: larger;
 }
 /* Tarot Kartlari Alternatif Dagilim */
-.tarot-cards-alternative img {
+.all-cards-alternative img {
   width: 4rem;
   height: 100%;
   /* width: 100%; */
 }
-.tarot-cards-alternative {
+.all-cards-alternative {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -207,7 +212,7 @@ h1 img {
   transition: transform 0.1s linear;
 }
 
-.tarot-cards-wrapper {
+.all-cards-wrapper {
   position: relative;
   /* width: 800px; */
   width: 100%;

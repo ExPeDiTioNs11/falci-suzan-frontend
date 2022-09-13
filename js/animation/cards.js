@@ -2,16 +2,6 @@ const tarotOptions = document.querySelectorAll(".tarot-reading-option");
 const cards = document.querySelectorAll(".all-cards");
 const totalCards = document.querySelector(".total-cards");
 const selectCards = document.querySelector(".all-cards-remaining");
-
-const wrapper = document.querySelector(".all-cards-wrapper");
-// const selectCardsAlternative = document.querySelector(
-//   ".all-cards-remaining-alternative"
-// );
-// const cardsSpread = document.querySelectorAll(".all-cards-alternative");
-// const totalCardsAlternative = document.querySelector(
-//   ".total-cards-alternative"
-// );
-
 const selectedCardsData = document.querySelector(
   'input[name$="selected-cards"]'
 );
@@ -51,47 +41,6 @@ function shuffleCards() {
 }
 shuffleCards();
 
-//Spread Alternative Cards
-
-// cardsSpread.forEach((card) => {
-//   let randomPosition = Math.floor(Math.random() * cardsSpread.length);
-//   card.style.order = randomPosition;
-//   cardShuffled = true;
-//   spreadCards();
-// });
-
-// totalCardsAlternative.textContent = cardsSpread.length;
-
-// function spreadCards() {
-//   let leftPosition = 0;
-//   let rotateDegree = -9;
-//   let translateDegree = 0;
-
-//   cardsSpread.forEach((card, index) => {
-//     card.style.left = `${leftPosition}px`;
-//     leftPosition +=
-//       (wrapper.clientWidth - card.clientWidth) / cardsSpread.length;
-//     card.style.transform = `rotate(${rotateDegree}deg)`;
-//     rotateDegree += 0.25;
-
-//     if (index <= 38) {
-//       card.style.transform += `translateY(${translateDegree}rem)`;
-//       translateDegree -= 0.012;
-//     } else if (index > 38) {
-//       card.style.transform += `translateY(${translateDegree}rem)`;
-//       translateDegree += 0.012;
-//     }
-//   });
-// }
-
-// let res;
-// window.onresize = function () {
-//   if (res) {
-//     clearTimeout(res);
-//   }
-//   res = setTimeout(spreadCards, 100);
-// };
-
 //OnClick Animation
 
 cards.forEach((card) => {
@@ -117,9 +66,7 @@ cards.forEach((card) => {
       );
       remainingCards++;
     }
-    console.log("array " + selectedCardsArray);
     selectedCardsData.value = selectedCardsArray;
-    console.log("data " + selectedCardsArray);
     selectCards.textContent = remainingCards;
 
     if (card.classList.contains("tarot")) {
@@ -153,31 +100,6 @@ function matchWithImages(cardType) {
 document.querySelector(".show-div").addEventListener("click", () => {
   document.querySelector(".display-all-cards").style.display = "block";
 });
-
-// Alternative Versiyon icin
-
-// cardsSpread.forEach((card) => {
-//   if (cardShuffled) {
-//     card.addEventListener("click", function () {
-//       if (remainingCards > 0) {
-//         if (card.classList.contains("selected-alternative")) {
-//           card.classList.remove("selected-alternative");
-//           remainingCards++;
-//         } else {
-//           card.classList.add("selected-alternative");
-//           remainingCards--;
-//         }
-//       } else if (
-//         remainingCards === 0 &&
-//         card.classList.contains("selected-alternative")
-//       ) {
-//         card.classList.remove("selected-alternative");
-//         remainingCards++;
-//       }
-//       selectCardsAlternative.textContent = remainingCards;
-//     });
-//   }
-// });
 
 // Form Validasyon
 
